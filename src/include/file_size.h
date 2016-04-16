@@ -3,8 +3,8 @@
 
 /***************************************************************************************************
  * Determines file size without opening the file. Compatible with Linux, Mac and Windows systems   *
- * Parameters:
- *     file_name
+ * Parameters:                                                                                     *
+ *     file_name                                                                                   *
  ***************************************************************************************************/
 long int file_size(const std::string& file_name) {
     #if defined(__unix__) || defined(__unix) || (defined(__APPLE__) && defined(__MACH__))
