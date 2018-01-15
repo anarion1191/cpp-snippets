@@ -1,8 +1,9 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.5)
 
-project(snippet-test)
+project(cpp-snippets)
 
-include_directories("${PROJECT_SOURCE_DIR}/src/include")
-add_definitions("-std=c++11 -Wall")
+include_directories("${PROJECT_SOURCE_DIR}/include")
+# is it better to use add_definitions() ?
+set(CMAKE_CXX_FLAGS "-std=c++17 -stdlib=libc++ -Wall -lc++ -lc++abi")
 
-add_executable(snippet-test ${PROJECT_SOURCE_DIR}/src/main.cpp)
+add_executable(base64_test ${PROJECT_SOURCE_DIR}/src/base64.cpp)
